@@ -13,3 +13,5 @@ The `jenkins` directory contains an example of the `Jenkinsfile` (i.e. Pipeline)
 you'll be creating yourself during the tutorial and the `scripts` subdirectory
 contains a shell script with commands that are executed when Jenkins processes
 the "Deliver" stage of your Pipeline.
+
+[![Build Status](https://dev.azure.com/GianluigiCrispino/test-project/_apis/build/status/giacris82.simple-java-maven-app?branchName=master)](https://dev.azure.com/GianluigiCrispino/test-project/_build/latest?definitionId=1&branchName=master)
