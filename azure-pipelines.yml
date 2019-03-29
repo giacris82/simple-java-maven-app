@@ -43,4 +43,11 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean compile process-resources org.openclover:clover-maven-plugin:setup test org.openclover:clover-maven-plugin:aggregate org.openclover:clover-maven-plugin:clover -Dmaven.test.failure.ignore=false'
+- task: PublishCodeCoverageResults@1
+  inputs:
+    #codeCoverageTool: 'JaCoCo' # Options: cobertura, jaCoCo
+    summaryFileLocation: 
+    reportDirectory: $(System.DefaultWorkingDirectory)/target/site/clover
+    #additionalCodeCoverageFiles: # Optional
+    #failIfCoverageEmpty: false # Optional
   
