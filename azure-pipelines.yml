@@ -11,6 +11,7 @@ pool:
 
 steps:
 - task: Maven@3
+  displayName: maven-build
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -20,7 +21,8 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean install'
-- task: Junit@3
+- task: Maven@3
+  displayName: unit-test 
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
