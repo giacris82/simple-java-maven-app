@@ -46,7 +46,7 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     #codeCoverageTool: 'JaCoCo' # Options: cobertura, jaCoCo
-    summaryFileLocation: 
+    summaryFileLocation: $(System.DefaultWorkingDirectory)/target/site/clover/clover.xml
     reportDirectory: $(System.DefaultWorkingDirectory)/target/site/clover
     #additionalCodeCoverageFiles: # Optional
     #failIfCoverageEmpty: false # Optional
